@@ -11,9 +11,8 @@
         <!-- The catalog items will be added dynamically here -->
     </ul>
 
-    <script src="json.js"></script>
     <script>// Load the JSON data from the catalog.json file
-        fetch('catalog.json.js')
+        fetch('catalog.json')
             .then(response => response.json())
             .then(catalogData => {
                 // Loop through the catalog data and create list items for each project
