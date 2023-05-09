@@ -6,8 +6,8 @@ async function loadJSON(url) {
 
 function createItemHTML(item) {
     const authors = item.author.map(author => `${author.family}, ${author.given}`).join('; ');
-    const issued = item.issued['date-parts'][0].join('-');
-    const accessed = item.accessed['date-parts'][0].join('-');
+    const issued = (item.issued && item.issued['date-parts'] && item.issued['date-parts'][0]) ? item.issued['date-parts'][0].join('-') : '';
+    const accessed = (item.accessed && item.accessed['date-parts'] && item.accessed['date-parts'][0]) ? item.accessed['date-parts'][0].join('-') : '';
     let html = `
     <div class="item">
       <div class="title">${item.title}</div>
