@@ -4,6 +4,13 @@ async function loadJSON(url) {
     return data;
 }
 
+async function loadCatalog(url) {
+    const catalog = await loadJSON(url);
+    console.log(catalog); // add this line
+    const itemsHTML = catalog.map(createItemHTML).join('\n');
+    document.getElementById('catalog').innerHTML = itemsHTML;
+}
+
 function createItemHTML(item) {
     const authors = item.author ? item.author.map(author => `${author.family}, ${author.given}`).join('; ') : '';
     const issued = item.issued['date-parts'][0].join('-');
@@ -20,10 +27,5 @@ function createItemHTML(item) {
     return html;
 }
 
-async function loadCatalog(url) {
-    const catalog = await loadJSON(url);
-    const itemsHTML = catalog.map(createItemHTML).join('\n');
-    document.getElementById('catalog').innerHTML = itemsHTML;
-}
 
 loadCatalog('catalog.json');
