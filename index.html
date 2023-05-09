@@ -7,16 +7,19 @@
     <h1>My Book Catalog</h1>
     <ul id="book-list"></ul>
 
+    <script src="index.js"></script>
+
     <script>fetch('catalog.json')
             .then(response => response.json())
             .then(data => {
                 let bookList = '';
                 for (const book of data) {
                     const title = book.title;
-                    const author = book.editor.map(editor => `${editor.given} ${editor.family}`).join(', '); // Join editor names into a comma-separated string
-                    const year = book.issued['date-parts'][0][0]; // Get the year from the issued date
-                    const tags = book.tags.join(', '); // Join tags into a comma-separated string
-                    bookList += `<li><h2>${title}</h2><p>${author}, ${year}</p><p>Tags: ${tags}</p></li>`;
+                    const author = book.editor.map(editor => `${editor.given} ${editor.family}`).join(', ');
+                    const year = book.issued['date-parts'][0][0];
+                    const tags = book.tags.join(', ');
+                    const link = book.URL;
+                    bookList += `<li><h2><a href="${link}">${title}</a></h2><p>${author}, ${year}</p><p>Tags: ${tags}</p></li>`;
                 }
                 const bookListElement = document.getElementById('book-list');
                 bookListElement.innerHTML = bookList;
