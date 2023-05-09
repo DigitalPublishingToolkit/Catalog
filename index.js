@@ -13,14 +13,14 @@ async function loadCatalog(url) {
 
 function createItemHTML(item) {
     const authors = item.author ? item.author.map(author => `${author.family}, ${author.given}`).join('; ') : '';
-    const issued = item.issued['date-parts'][0].join('-');
-    const accessed = item.accessed['date-parts'][0].join('-');
+    const issued = item.issued && item.issued['date-parts'] ? item.issued['date-parts'][0].join('-') : '';
+    const accessed = item.accessed && item.accessed['date-parts'] ? item.accessed['date-parts'][0].join('-') : '';
     let html = `
     <div class="item">
       <div class="title">${item.title}</div>
       <div class="authors">${authors}</div>
       <div class="publisher">${item.publisher}, ${item['publisher-place']}, ${issued}</div>
-      <div class="accessed">Accessed ${accessed}</div>
+      <div class="accessed">${accessed ? 'Accessed ' + accessed : ''}</div>
       <div class="url"><a href="${item.URL}">${item.URL}</a></div>
     </div>
   `;
