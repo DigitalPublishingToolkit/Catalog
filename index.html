@@ -1,3 +1,4 @@
+Copy code
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,20 +8,22 @@
     <h1>My Book Catalog</h1>
     <ul id="book-list"></ul>
 
-    <script src="index.js"></script>
-
-    <script>fetch('catalog.json')
+    <script>// Read the contents of the JSON file
+        fetch('catalog.json')
             .then(response => response.json())
             .then(data => {
+                console.log(data); // Log the JSON data to the console
+                // Create a string of HTML for each book in the catalog
                 let bookList = '';
                 for (const book of data) {
                     const title = book.title;
-                    const author = book.editor.map(editor => `${editor.given} ${editor.family}`).join(', ');
+                    const author = book.author.map(author => `${author.given} ${author.family}`).join(', ');
                     const year = book.issued['date-parts'][0][0];
                     const tags = book.tags.join(', ');
                     const link = book.URL;
                     bookList += `<li><h2><a href="${link}">${title}</a></h2><p>${author}, ${year}</p><p>Tags: ${tags}</p></li>`;
                 }
+                // Add the HTML to the page
                 const bookListElement = document.getElementById('book-list');
                 bookListElement.innerHTML = bookList;
             });</script>
