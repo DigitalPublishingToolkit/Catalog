@@ -1,33 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Github Catalog</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book Catalog</title>
 </head>
 <body>
-    <h1>Github Catalog</h1>
-    <ul id="catalog-list">
-        <!-- The catalog items will be added dynamically here -->
-    </ul>
+    <h1>My Book Catalog</h1>
+    <ul id="book-list"></ul>
 
-    <script>// Load the JSON data from the catalog.json file
-        fetch('catalog.json')
+    <script>fetch('catalog.json')
             .then(response => response.json())
-            .then(catalogData => {
-                // Loop through the catalog data and create list items for each project
-                var catalogList = document.getElementById("catalog-list");
-                for (var i = 0; i < catalogData.length; i++) {
-                    var project = catalogData[i];
-                    var listItem = document.createElement("li");
-                    var link = document.createElement("a");
-                    link.href = project.url;
-                    link.textContent = project.name;
-                    listItem.appendChild(link);
-                    listItem.appendChild(document.createTextNode(": " + project.description));
-                    catalogList.appendChild(listItem);
+            .then(data => {
+                let bookList = '';
+                for (const book of data) {
+                    const title = book.title;
+                    const author = book.editor.map(editor => `${editor.given} ${editor.family}`).join(', '); // Join editor names into a comma-separated string
+                    const year = book.issued['date-parts'][0][0]; // Get the year from the issued date
+                    const tags = book.tags.join(', '); // Join tags into a comma-separated string
+                    bookList += `<li><h2>${title}</h2><p>${author}, ${year}</p><p>Tags: ${tags}</p></li>`;
                 }
-            })
-            .catch(error => console.error(error));</script>
+                const bookListElement = document.getElementById('book-list');
+                bookListElement.innerHTML = bookList;
+            });</script>
 </body>
 </html>
