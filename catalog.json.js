@@ -1,4 +1,4 @@
-var catData = [
+var catalogData = [
 	{
 		"id": "http://zotero.org/users/local/l3M8CyrR/items/ER75RUUH",
 		"type": "book",
