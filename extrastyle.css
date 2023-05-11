@@ -37,8 +37,7 @@
 
 .headline {
     background-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
+    color: black;
 }
 
 .blue {
