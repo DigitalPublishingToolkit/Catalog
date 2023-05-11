@@ -2,20 +2,20 @@ var texts =
     {
         "headline":
             {
-                "english": "Catalogue of the Insitute of Network Cultures Collection",
-                "german": "Katalog von dem Nachlass Rudolf Geyer"
+                "english": "Insitute of Network Cultures Publication Catalog",
+                "german": "Insitute of Network Cultures Publication Catalog"
             }
         ,
         "stiftFlorianTip":
             {
-                "english": "Go to Stift Florian's Website",
-                "german": "Gehe zur Website von Stift Florian"
+                "english": "Go to INC Website",
+                "german": "Gehe zur Website von INC"
             }
         ,
         "digitalOrientalistTip":
             {
-                "english": "Made by L.W.C. van Lit",
-                "german": "hergestellt von Dr. L.W.C. van Lit"
+                "english": "INC Publications",
+                "german": "INC Publications""
             }
         ,
         "flagTip":
@@ -31,10 +31,10 @@ var texts =
             }
         ,
         "welcomeBody":
-            {
-                "english": "Welcome to the catalogue of the Rudolf Geyer Collection at Stift Florian. This collection spans more than 1.500 titles, collected by Rudolf Geyer († 1929), professor at Vienna University and scholar of Arabic literature. The collection consists mostly of printed books, from both Europe and the Middle East, all of them from the 19th century or early 20th century. A handful of manuscripts are also preserved. Use the search box below to narrow your focus, and click on the circle with an i next to the title for more information. The sort functions are fairly limited, only sorting alphabetical or numerical low to high. If no value is given, it is sorted to the top. For Author sorting, preference is given to first author, then editor, then translator.",
-                "german": "Willkommen beim Katalog dem Nachlass Rudolf Geyer im Stift Florian. Diese Kollektion umfasst mehr als 1.500 Titel, gesammelt von Rudolf Geyer († 1929), Professor an der Universität Wien und Gelehrter für arabische Literatur. Die Sammlung besteht hauptsächlich aus gedruckten Büchern aus Europa und dem Nahen Osten, alle aus dem 19. oder frühen 20. Jahrhundert. Eine Handvoll Manuskripte sind ebenfalls erhalten. Verwenden Sie das Suchfeld, um den Fokus einzugrenzen, und klicken Sie auf den Kreis mit einem i neben dem Titel, um weitere Informationen zu erhalten. Die Sortierfunktionen sortieren nur alphabetisch oder numerisch von niedrich nach hoch. Wenn kein Wert angegeben ist, wird dieser nach oben sortiert. Bei der Autorensortierung wird der Verfasser, dann der Herausgeber und dann der Übersetzer bevorzugt."
-            }
+        {
+            "english":                "Welcome to the Insistue of Network Culture Publication Catalogue.INC publication series include essay collections, commissioned writings on the intersection of research, art, and activism, and theoretical works with an international scope. Experiments are done with multiple formats such as print, ePub, PDF, etc. keeping quality standards in content and design high at all times. The INC produces and distributes books in-house, which allows publishing of state-of-the-art research in a fast yet personal way. Most publications are open access and available for free for everyone interested.
+            "german":
+        }
         ,
         "searchButton":
             {
@@ -162,4 +162,4 @@ var texts =
                 "english": "Close",
                 "german": "schließen"
             }
-    }
+}
