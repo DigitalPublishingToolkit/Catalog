@@ -15,7 +15,7 @@ var texts =
         "digitalOrientalistTip":
             {
                 "english": "INC Publications",
-                "german": "INC Publications""
+                "german": "INC Publications"
             }
         ,
         "flagTip":
@@ -32,7 +32,7 @@ var texts =
         ,
         "welcomeBody":
         {
-            "english": "Welcome to the Insistue of Network Culture Publication Catalogue.INC publication series include essay collections, commissioned writings on the intersection of research, art, and activism, and theoretical works with an international scope. Experiments are done with multiple formats such as print, ePub, PDF, etc. keeping quality standards in content and design high at all times. The INC produces and distributes books in-house, which allows publishing of state-of-the-art research in a fast yet personal way. Most publications are open access and available for free for everyone interested.
+            "english": "Welcome to the Insistue of Network Culture Publication Catalogue.INC publication series include essay collections, commissioned writings on the intersection of research, art, and activism, and theoretical works with an international scope. Experiments are done with multiple formats such as print, ePub, PDF, etc. keeping quality standards in content and design high at all times. The INC produces and distributes books in-house, which allows publishing of state-of-the-art research in a fast yet personal way. Most publications are open access and available for free for everyone interested.",
             "german": "Herzlich willkommen"
         }
         ,
@@ -80,8 +80,8 @@ var texts =
         ,
         "beginTitleCatalog":
             {
-                "english": "All entries of the Geyer Catalogue",
-                "german": "Alle Einträge des Geyer-Katalogs"
+                "english": "All entries of the INC Catalogue",
+                "german": "Alle Einträge des INC-Katalogs"
             }
         ,
         "noResultsTitleCatalog":
