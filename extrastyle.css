@@ -31,13 +31,16 @@
 
 .header {
     background-color: transparent;
+    color: rgba(0, 0, 0);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
 .headline {
     background-color: transparent;
-    color: black;
+    color: rgba(0, 0, 0);
+    -webkit-background-clip: text;
+    background-clip: text;
 }
 
 .blue {
