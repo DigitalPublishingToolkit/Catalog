@@ -54,7 +54,7 @@ window.onload = function() {
 
   // Initial building of shadow catalog and interface
   Reducing_Catalogue(catData);
-  Switch_Language("german");
+  Switch_Language("english");
 };
 
 // 2. Creating a shadow-catalog with simplified entries to easier match a search term in the search function
