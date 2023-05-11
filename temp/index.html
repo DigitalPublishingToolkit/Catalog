@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Book Catalog</title>
+</head>
+<body>
+    <h1>My Book Catalog</h1>
+    <ul id="book-list"></ul>
+
+    <script>fetch('catalog.json')
+            .then(response => response.json())
+            .then(data => {
+                console.log(data); // log the JSON data to the console
+                let bookList = '';
+                for (const book of data) {
+                    const title = book.title;
+                    const author = book.author.map(author => `${author.given} ${author.family}`).join(', ');
+                    const year = book.issued['date-parts'][0][0];
+                    const tags = book.tags.join(', ');
+                    const link = book.URL;
+                    bookList += `<li><h2><a href="${link}">${title}</a></h2><p>${author}, ${year}</p><p>Tags: ${tags}</p></li>`;
+                }
+                const bookListElement = document.getElementById('book-list');
+                bookListElement.innerHTML = bookList;
+            })
+            .catch(error => console.error(error)); // log any errors to the console</script>
+</body>
+</html>
